@@ -6,13 +6,20 @@ const Output = ({ bill, tipPercentage, peopleValue, onReset, isValid }) => {
   const tipAmount = isValid ? (bill * tipPercentage) / peopleValue : 0;
   const totalAmount = isValid ? (bill + bill * tipPercentage) / peopleValue : 0;
 
+  function formatNumber(value) {
+    if (value > 100000) {
+      return value.toExponential(2); // Display two decimal places in exponential form
+    }
+    return value.toFixed(2); // Standard format with two decimal places
+  }
+
   const renderOutputRow = (label, value) => (
     <div className="flex justify-between items-center">
       <div className="flex-grow">
         <p className="text-white text-sm">{label}</p>
         <p className="text-grayish-cyan text-xs">/ person</p>
       </div>
-      <p className="text-strong-cyan text-3xl sm:text-4xl">${value.toFixed(2)}</p>
+      <p className="text-strong-cyan text-3xl sm:text-4xl">${formatNumber(value)}</p>
     </div>
   );
 
