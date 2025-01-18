@@ -22,7 +22,7 @@ const TipForm = ({ onTipSelect, customTip, handleCustomInputChange }) => {
           <button
             key={tip}
             type="button"
-            className={`bg-vd-cyan p-2 rounded-md hover:bg-active-cyan hover:text-vd-cyan ${selectedTip === tip ? 'bg-strong-cyan text-vd-cyan' : ' text-white'}`}
+            className={`p-2 rounded-md hover:bg-active-cyan hover:text-vd-cyan ${selectedTip === tip ? 'bg-strong-cyan text-vd-cyan' : ' bg-vd-cyan text-white'}`}
             onClick={() => handleButtonClick(tip)}
           >
             {tip}%
