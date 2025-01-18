@@ -57,7 +57,7 @@ function App() {
   const isValid = bill > 0 && tipPercentage > 0 && peopleValue > 0;
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full m-auto">
+    <div className="bg-lg-cyan text-2xl text-grayish-cyan font-space flex flex-col items-center justify-center h-full w-full m-auto">
       <header className="m-12">
         <img src={logo} alt="Logo" />
       </header>
